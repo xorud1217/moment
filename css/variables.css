@@ -1,0 +1,7 @@
+:root {
+    --shadow: 1px 1px 9px rgb(44, 44, 44, 0.3);
+    --transw: rgba(255, 255, 255, 0.5);
+    --transwo: rgba(255, 255, 255, 0.8);
+  
+    --trans: 0.5s ease-in-out;
+  }

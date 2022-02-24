@@ -1,3 +1,244 @@
+@import url("reset.css");
+@import url("variables.css");
+
 .hidden {
-    display:none;
+  display: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto Mono", "Nanum Gothic", monospace, sans-serif;
+}
+
+img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+}
+
+.column {
+  z-index: 2;
+  display: flex;
+  width: 33%;
+  height: 100vh;
+}
+
+/*Column1*/
+.todo {
+  width: 55%;
+}
+.todo-box {
+  margin-top: 70px;
+  margin-left: 30%;
+  background-color: var(--transw);
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 65vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow);
+  transition: var(--trans);
+}
+.todo-box:hover {
+  background-color: var(--transwo);
+  transform: scale(1.05, 1.05);
+}
+.todo-box h2 {
+  color: white;
+  text-shadow: var(--shadow);
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.todo-box h2 span {
+  font-size: 23px;
+}
+.todo-form {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+.todo-form input {
+  width: 100%;
+}
+.todo-list {
+  margin-top: 20px;
+}
+.todo-list li {
+  margin-top: 10px;
+  text-align: center;
+  border-bottom: 1px solid rgba(253, 135, 218, 0.6);
+}
+
+.todo-list li button {
+  background: none;
+  border: none;
+  right: 2px;
+  font-size: 18px;
+  opacity: 0.6;
+  transition: var(--trans);
+}
+.todo-list li button:hover {
+  opacity: 1;
+}
+
+/*Column2*/
+.column:nth-child(2) {
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Column2 - Music*/
+.column:nth-child(2) .music-box {
+  margin-top: 70px;
+  width: 70%;
+}
+.music-box audio {
+  width: 100%;
+  height: 40px;
+  opacity: 0.6;
+  transition: var(--trans);
+}
+audio:hover {
+  opacity: 0.8;
+  transform: scale(1.05, 1.05);
+}
+
+/*Column2 - Clcok*/
+.column:nth-child(2) .clock {
+  font-size: 60px;
+  color: antiquewhite;
+  text-shadow: var(--shadow);
+  margin-top: 70px;
+  text-align: center;
+}
+.date {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 200;
+  color: antiquewhite;
+  text-shadow: var(--shadow);
+  text-align: center;
+}
+
+/*Greeting text*/
+.column:nth-child(2) .greeting {
+  margin-top: 20%;
+  font-size: 55px;
+  color: white;
+  text-shadow: 1px 1px 9px rgba(255, 255, 255, 0.3);
+}
+.greeting2 {
+  margin-top: 20px;
+  text-align: center;
+  text-shadow: var(--shadow);
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  text-shadow: 1px 1px 9px rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  transition: var(--trans);
+}
+
+.greeting2:hover {
+  transform: scale(1.05, 1.05);
+}
+
+/*Column2 - Log In*/
+.login-box {
+  margin-top: 30%;
+  width: 340px;
+  height: 75px;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: var(--transw);
+  box-shadow: var(--shadow);
+  border-radius: 20px;
+  transition: var(--trans);
+}
+.login-box:hover {
+  background-color: var(--transwo);
+  transform: scale(1.05, 1.05);
+}
+.login-form .btn {
+  opacity: 0.7;
+  font-weight: 500;
+  border: none;
+  box-shadow: var(--shadow);
+  border-radius: 12px;
+  padding: 8px;
+  background-color: wheat;
+  transition: var(--trans);
+}
+.login-form .btn:hover {
+  opacity: 1;
+  box-shadow: var(--shadow);
+}
+
+/*Column3*/
+.weather {
+  color: white;
+  font-size: 16px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.weather span:last-child {
+  margin-left: 10px;
+  margin-right: 50px;
+}
+.sns {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+.sns span {
+  display: inline-block;
+  padding: 0px 10px;
+  font-size: 37px;
+  color: white;
+}
+
+.sns span a i {
+  color: white;
+  opacity: 0.6;
+  text-shadow: var(--shadow);
+  transition: var(--trans);
+}
+.sns span a i:hover {
+  opacity: 1;
+  transform: scale(1.05, 1.05);
+}
+
+/*Quotes*/
+.quotes {
+  width: 60%;
+  height: 20px;
+  position: absolute;
+  bottom: 80px;
+  text-align: center;
+}
+.quotes span {
+  display: block;
+  width: 100%;
+  color: black;
+  
+  text-shadow: var(--shadow);
+}
+.quotes span:first-child {
+  font-size: 20px;
+  font-weight: bold;
+}
+.quotes span:last-child {
+  font-size: 17px;
+  margin-top: 10px;
+  font-weight: 200;
 }

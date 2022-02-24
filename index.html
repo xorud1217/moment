@@ -1,33 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://kit.fontawesome.com/06a27d94ad.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Roboto+Mono:ital,wght@0,200;0,500;1,200;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Momentum</title>
 </head>
+
 <body>
-    <form class="hidden" id="login-form">
-    <input 
-    required maxlength = "15" type="text" placeholder="What is your name?">
-    <input type="submit" value="Login">
+    <!--Column1-->
+    <div class="column">
+        <!--To Do List-->
+        <div class="todo hidden">
+            <div class="todo-box">
+                <h2>To DO List🔨</h2>
+            <form class="todo-form">
+            <input type="text" placeholder="Write a To Do" required>
+            </form>
+            <ul class="todo-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Column2-->
+    <div class="column">
+        <!--Clock-->
+        <div class="clock">
+            <h2 class="realtime-clock">00:00</h2>
+            <h3 class="date"></h3>
+        </div>
+        <!--Greeting-->
+        <h1 class="greeting hidden"></h1>
+        <h2 class="greeting2 hidden">+｡have a nice day｡+</h2>
+
+        <!--Log In-->
+        <div class="login-box">
+        <form class="login-form">
+            <input required maxlength = "15" type="text" placeholder="What is your name?">
+            <input class="btn" type="submit" value="Log In">
+        </form>
+        </div>
+    </div>
+
+    <!--Column3-->
+    <div class="column">
+        <div class="weather">
+            <span></span>
+            <span></span>
+        </div>
+        <!--SNS-->
+        <div class="sns">
+            <span>
+                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+            </span>
+            <span>
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            </span>
+            <span>
+                <a href="https://twitter.com/i/flow/login"><i class="fab fa-twitter"></i></a>
+            </span>
+            <span>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            </span>
+        </div>
+    </div>
+
+    <!--Quotes-->
+    <div class="quotes">
+        <span></span>
+        <span></span>
+    </div>
+
     
-    </form>
-    <h2 id="clock">00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-        <input type="text" placeholder="Write a To Do and Press Enter" required>
-    </form>
-    <ul id="todo-list"></ul>
-    <div id="quote">
-        <span></span>
-        <span></span>
-    </div>
-    <div id="weather">
-        <span></span>
-        <span></span>
-    </div>
+
+    <!--JS-->
     <script src="js/greeting.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
